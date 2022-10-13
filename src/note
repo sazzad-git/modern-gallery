@@ -1,0 +1,24 @@
+<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Container>
+        <Navbar.Toggle />
+        <Navbar.Collapse className="justify-content-end">
+        <Navbar.Brand as={HashLink} to="/#home">Navbar</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link as={HashLink} to="/home#home">Home</Nav.Link>
+            <Nav.Link as={HashLink} to="/cards#cards">Cards</Nav.Link>
+            <Nav.Link as={HashLink} to="/login#login">Login</Nav.Link>
+          </Nav>
+          <Navbar.Text>
+            Signed in as: <a href="#login">Mark Otto</a>
+          </Navbar.Text>
+        </Navbar.Collapse>
+        </Container>
+      </Navbar>
+
+
+      {
+        onions.map(onion=> <CardItem
+        onion={onion}
+        key={onion.id}
+        ></CardItem>)
+    }
